@@ -1,12 +1,9 @@
 import React from "react";
-import "./home.css";
+import "./style.css";
 import cloth from "../Images/clothImg.svg";
 import Nav from "../Components/Nav";
 
 const Home = () => {
-  // function cll(){
-  //   document.getElementById("slate").style.backgroundColor="#367FB2";
-  // }
   return (
     <>
       <Nav />
@@ -23,7 +20,7 @@ const Home = () => {
               <button>16’ 55’’</button>
             </div>
           </div>
-         
+
           <div>
             <div className="box">
               <h1>Surface Finish</h1>
@@ -34,7 +31,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          
+
           <div>
             <div className="box">
               <h1>Colour</h1>

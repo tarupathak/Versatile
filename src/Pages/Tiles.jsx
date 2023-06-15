@@ -1,7 +1,6 @@
 import React from "react";
 import Nav from "../Components/Nav";
 import "./style.css";
-import tile1 from "../Images/tile1.svg";
 import sound from "../Images/sound.svg";
 import box from "../Images/box.svg";
 import { tileItems } from "../Components/TileItems";
@@ -49,9 +48,7 @@ const Tiles = () => {
                 <div>
                   <div id="tile-text">
                     <h3>{item.head}</h3>
-                    <p>
-                      {item.tail}
-                    </p>
+                    <p>{item.tail}</p>
                   </div>
                   <div className="btn-tile">
                     <button>{item.btn1}</button>

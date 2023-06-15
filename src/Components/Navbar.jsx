@@ -16,7 +16,7 @@ const Navbar = () => {
     return setOpen(false), setShow(true);
   };
   const handleOpen = (value) => {
-    return setOpen(true),setSize(value), setShow(false);
+    return setOpen(true), setSize(value), setShow(false);
   };
   const handleClose = () => {
     setOpen(false);
@@ -75,8 +75,6 @@ const Navbar = () => {
             </Modal.Footer>
           </Modal>
         </div>
-        {/* {show && !isOtpModal && <PhonePopup openOtp={handleOptToggle} />}
-        {isOtpModal && <OtpPopUp closePop={handleAllClose} />} */}
       </nav>
     </>
   );

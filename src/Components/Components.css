@@ -310,10 +310,10 @@ h2 {
   height: 5vw;
 }
 
-@media(max-width: 800px){
+@media (max-width: 800px) {
   #otp-box .rs-input {
     margin: 3vw;
     width: 11vw;
     height: 11vw;
-}
+  }
 }
