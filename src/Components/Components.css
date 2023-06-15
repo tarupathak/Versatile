@@ -317,3 +317,20 @@ h2 {
     height: 11vw;
   }
 }
+
+/* <--------------OTP Modal--------------->*/
+
+.otp-input {
+  display: flex;
+  justify-content: center;
+}
+
+.otp-input input {
+  width: 5vw;
+  height: 5vw;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 0 5px;
+  text-align: center;
+  font-size: 16px;
+}

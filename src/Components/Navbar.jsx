@@ -3,9 +3,11 @@ import logo from "../Images/logo.svg";
 import "./Components.css";
 import { useNavigate } from "react-router-dom";
 import { Modal, ButtonToolbar, Button, Input } from "rsuite";
+import OtpInput from "react-otp-input";
 
 const Navbar = () => {
   const navHandler = useNavigate();
+  const [otp, setOtp] = useState("");
   function handleSubmit() {
     return navHandler("/catalogue"), handleOpen("md");
   }
@@ -62,10 +64,25 @@ const Navbar = () => {
                 access.
               </p>
               <div id="otp-box">
+                {/* <Input className="my-input" type="number" />
                 <Input className="my-input" type="number" />
                 <Input className="my-input" type="number" />
-                <Input className="my-input" type="number" />
-                <Input className="my-input" type="number" />
+                <Input className="my-input" type="number" /> */}
+                <OtpInput
+                  value={otp}
+                  onChange={setOtp}
+                  numInputs={4}
+                  renderSeparator={<span>-</span>}
+                  renderInput={(props) => <input {...props} />}
+                  inputStyle={{
+                    width: "4rem",
+                    height: "4rem",
+                    margin: "0 0.5rem",
+                    fontSize: "2rem",
+                    borderRadius: "4px",
+                    border: "1px solid rgba(0,0,0,.3)",
+                  }}
+                />
               </div>
             </Modal.Body>
             <Modal.Footer>
