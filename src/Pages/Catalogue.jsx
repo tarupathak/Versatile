@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
-import PhonePopup from "../Components/PhonePopup";
 import Navbar from "../Components/Navbar";
 import Card from "../Components/Card";
 import "./style.css";
-import OtpPopUp from "../Components/OtpPopUp";
 
 const Catalogue = () => {
   // const [show, setShow] = useState(false);

@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import logo from "../Images/logo.svg";
 import "./Components.css";
 import { useNavigate } from "react-router-dom";
-// import PhonePopup from "./PhonePopup";
-// import OtpPopUp from "./OtpPopUp";
 import { Modal, ButtonToolbar, Button, Input } from "rsuite";
+
 const Navbar = () => {
   const navHandler = useNavigate();
   function handleSubmit() {
