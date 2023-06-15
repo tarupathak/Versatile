@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+
+/* <--------------Navbar--------------->*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.logo img {
+  width: 23.6vw;
+  height: 8vh;
+}
+
+nav {
+  background: #ffffff;
+  box-shadow: 0px -4px 39px 4px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 12vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vw;
+}
+
+#cata {
+  font-weight: 600;
+  font-size: 2.6vh;
+  line-height: 24px;
+  letter-spacing: 0.53em;
+  font-family: "Quicksand", sans-serif;
+  cursor: pointer;
+}
+
+.item h3 {
+  font-size: 3vh;
+}
+
+/* <--------------Card--------------->*/
+
+#container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 98px 1px rgba(0, 0, 0, 0.25);
+  margin: 5vh;
+}
+
+#pdf-img img {
+  height: 20vh;
+  align-items: center;
+}
+
+@media only screen and (max-width: 560px) {
+  nav {
+    width: 108%;
+  }
+
+  #cata {
+    font-size: 1.3vh;
+  }
+}
+
+/* <--------------PhonePopUp--------------->*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 5rem;
+}
+
+.modal-wrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64.69vw;
+  height: 60.47vh;
+  padding: 2rem 3rem;
+  border-radius: 0.5rem;
+  background-color: white;
+}
+
+h2 {
+  text-align: center;
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 7vh;
+  line-height: 62px;
+  letter-spacing: 0.06em;
+  align-items: center;
+  color: #000000;
+}
+
+#text {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3vh;
+  line-height: 24px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: #000000;
+}
+
+.model-btn {
+  width: 35.7vw;
+  height: 11.3vh;
+  align-items: center;
+  background: #367fb2;
+  border-radius: 20px;
+  color: white;
+  font-size: 3vh;
+  border-style: none;
+}
+
+.inputBox input {
+  width: 59.7vw;
+  height: 17.08vh;
+
+  border: 1px solid #000000;
+  border-radius: 20px;
+  padding: 5vh;
+  font-size: 3vh;
+}
+
+/* <--------------OTPPopUp--------------->*/
+
+.inputBox2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.inputBox2 input {
+  width: 7.63vw;
+  height: 13.38vh;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  margin: 2vw;
+  font-size: 3vh;
+}
+
+@media (max-width: 680px) {
+  h2 {
+    font-size: 5vh;
+    line-height: 42px;
+  }
+  .inputBox input {
+    height: 13.08vh;
+  }
+  .model-btn {
+    height: 10.3vh;
+  }
+  .inputBox2 input {
+    width: 10.63vw;
+    height: 7.38vh;
+  }
+}
+
+@media (max-width: 680px) {
+  h2 {
+    font-size: 5vh;
+    line-height: 42px;
+  }
+  .inputBox input {
+    height: 11.08vh;
+  }
+  .model-btn {
+    height: 9.3vh;
+  }
+}
+
+@media (max-width: 320px) {
+  h2 {
+    font-size: 3vh;
+    line-height: 26px;
+  }
+
+  #text {
+    font-size: 2vh;
+    line-height: 21px;
+  }
+  .inputBox input {
+    height: 6.08vh;
+  }
+  .model-btn {
+    height: 9.3vh;
+  }
+
+  .inputBox2 input {
+    width: 12.63vw;
+    height: 6.38vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .inputBox2 input {
+    width: 7.63vw;
+    height: 9.38vh;
+  }
+}
+
+@media (max-width: 538px) {
+  h2 {
+    font-size: 5vh;
+    line-height: 42px;
+  }
+  .inputBox input {
+    height: 11.08vh;
+  }
+  .model-btn {
+    height: 9.3vh;
+  }
+}
+
+/* <--------------Phone Modal--------------->*/
+
+.rs-modal-header {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 8vw;
+  line-height: 1.25;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: #000000;
+}
+
+.rs-modal-body p {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: #000000;
+}
+
+.rs-modal-body-input {
+  width: 861px;
+  height: 123px;
+
+  background: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 20px;
+}
+
+.rs-modal-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.rs-btn-primary {
+  width: 29.9vw;
+  height: 6.5vh;
+  background-color: #367fb2;
+  border-radius: 10px;
+}
+
+.rs-input {
+  margin-top: 2vw;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+#otp-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#otp-box .rs-input {
+  margin: 2vw;
+  width: 5vw;
+  height: 5vw;
+}
+
+@media(max-width: 800px){
+  #otp-box .rs-input {
+    margin: 3vw;
+    width: 11vw;
+    height: 11vw;
+}
+}
