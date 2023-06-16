@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import Nav from "../Components/Nav";
 import "./style.css";
 import sound from "../Images/sound.svg";
+import Live from "../Components/Live";
+import Application from "../Components/Application";
 import box from "../Images/box.svg";
 import { tileItems } from "../Components/TileItems";
 
 const Tiles = () => {
+  const [show, setShow] = useState(false);
+  const [pop, setPop] = useState(false);
+
+  const closeModal = () => {
+    return setShow(false);
+  };
+  const closePop = () => setPop(false);
   return (
     <>
       <Nav />
@@ -56,11 +65,13 @@ const Tiles = () => {
                   </div>
                 </div>
                 <div id="side-flex">
-                  <div>
+                  <div onClick={() => setPop(true)}>
                     <img src={sound} alt="sound" />
+                    {pop && <Live closePop={closePop} />}
                   </div>
                   <div>
-                    <img src={box} alt="box" />
+                    <img src={box} alt="box" onClick={() => setShow(true)} />
+                    {show && <Application closeModal={closeModal} />}
                   </div>
                 </div>
               </div>

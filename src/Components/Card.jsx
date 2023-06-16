@@ -1,5 +1,4 @@
 import React from "react";
-import pdf from "../Images/pdf.svg";
 import { cardItems } from "./CardItems";
 import "./Components.css";
 

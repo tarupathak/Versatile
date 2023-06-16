@@ -64,10 +64,6 @@ const Navbar = () => {
                 access.
               </p>
               <div id="otp-box">
-                {/* <Input className="my-input" type="number" />
-                <Input className="my-input" type="number" />
-                <Input className="my-input" type="number" />
-                <Input className="my-input" type="number" /> */}
                 <OtpInput
                   value={otp}
                   onChange={setOtp}
