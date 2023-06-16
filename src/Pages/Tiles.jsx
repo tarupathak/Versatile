@@ -2,19 +2,28 @@ import React, { useState } from "react";
 import Nav from "../Components/Nav";
 import "./style.css";
 import sound from "../Images/sound.svg";
-import Live from "../Components/Live";
-import Application from "../Components/Application";
 import box from "../Images/box.svg";
 import { tileItems } from "../Components/TileItems";
+import { Modal, ButtonToolbar, Button, Placeholder } from "rsuite";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
+import CarousalImg1 from "../Images/carousalImg1.svg";
 
 const Tiles = () => {
+  const [open, setOpen] = React.useState(false);
   const [show, setShow] = useState(false);
-  const [pop, setPop] = useState(false);
+  const [size, setSize] = React.useState();
 
-  const closeModal = () => {
-    return setShow(false);
+  const handleShow = (value) => {
+    setShow(true);
+    setSize(value);
   };
-  const closePop = () => setPop(false);
+  const handleOpen = (value) => {
+    setSize(value);
+    setOpen(true);
+  };
+  const handleClose = () => setOpen(false);
+  const handleExit = () => setShow(false);
   return (
     <>
       <Nav />
@@ -65,14 +74,64 @@ const Tiles = () => {
                   </div>
                 </div>
                 <div id="side-flex">
-                  <div onClick={() => setPop(true)}>
-                    <img src={sound} alt="sound" />
-                    {pop && <Live closePop={closePop} />}
-                  </div>
-                  <div>
-                    <img src={box} alt="box" onClick={() => setShow(true)} />
-                    {show && <Application closeModal={closeModal} />}
-                  </div>
+                  <ButtonToolbar>
+                    <Button size="sm" onClick={() => handleOpen("sm")}>
+                      <div>
+                        <img src={sound} alt="sound" />
+                      </div>
+                    </Button>
+                    <Button>
+                      <div>
+                        <img
+                          src={box}
+                          alt="box"
+                          onClick={() => handleShow("sm")}
+                        />
+                      </div>
+                    </Button>
+                  </ButtonToolbar>
+                  <Modal size={size} open={open} onClose={handleClose}>
+                    <Modal.Header>
+                      <Modal.Title className="title">Live Images</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                      <Carousel
+                        swipeable
+                        showStatus={false}
+                        showIndicators={false}
+                        dynamicHeight
+                        showThumbs={false}
+                      >
+                        <div>
+                          <img src={CarousalImg1} />
+                        </div>
+                        <div>
+                          <img src={CarousalImg1} />
+                        </div>
+                      </Carousel>
+                    </Modal.Body>
+                  </Modal>
+                  <Modal size={size} open={show} onClose={handleExit}>
+                    <Modal.Header>
+                      <Modal.Title className="title">Applications</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                      <Carousel
+                        swipeable
+                        showStatus={false}
+                        showIndicators={false}
+                        dynamicHeight
+                        showThumbs={false}
+                      >
+                        <div>
+                          <img src={CarousalImg1} />
+                        </div>
+                        <div>
+                          <img src={CarousalImg1} />
+                        </div>
+                      </Carousel>
+                    </Modal.Body>
+                  </Modal>
                 </div>
               </div>
             </div>

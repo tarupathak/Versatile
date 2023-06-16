@@ -260,56 +260,14 @@ h3 {
 
 /*<-------------------TileModal-------------------->*/
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.rs-modal-header {
+  text-align: left;
 }
 
-.container {
-  margin: 5rem;
-  
-}
-
-.modal-wrapper {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  background-color: rgba(189, 189, 189, 0.9);
-
-}
-
-.modal-container {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 30rem;
-  padding: 2rem 3rem;
-  border-radius: 0.5rem;
-  background-color: white;
-}
-
-h2 {
-  color: #007dfe;
-  font-size: 6vh;
-  text-align: center;
-}
-
-#text {
-  font-size: 4vh;
-  color: black;
-  text-align: center;
-}
-
-.model-btn {
-  color: white;
-  background-color: #007dfe;
-  height: 5.6vh;
-  width: 9vw;
-  margin-left: 7vw;
-  border-radius: 0.5vw;
+.title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2vw;
+  color: #000000;
 }
 
