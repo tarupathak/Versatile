@@ -74,22 +74,13 @@ const Tiles = () => {
                   </div>
                 </div>
                 <div id="side-flex">
-                  <ButtonToolbar>
-                    <Button size="sm" onClick={() => handleOpen("sm")}>
-                      <div>
-                        <img src={sound} alt="sound" />
-                      </div>
-                    </Button>
-                    <Button>
-                      <div>
-                        <img
-                          src={box}
-                          alt="box"
-                          onClick={() => handleShow("sm")}
-                        />
-                      </div>
-                    </Button>
-                  </ButtonToolbar>
+                  <div onClick={() => handleOpen("sm")}>
+                    <img src={sound} alt="sound" />
+                  </div>
+
+                  <div onClick={() => handleShow("sm")}>
+                    <img src={box} alt="box" />
+                  </div>
                   <Modal size={size} open={open} onClose={handleClose}>
                     <Modal.Header>
                       <Modal.Title className="title">Live Images</Modal.Title>
@@ -97,6 +88,7 @@ const Tiles = () => {
                     <Modal.Body>
                       <Carousel
                         swipeable
+                        showArrows={true}
                         showStatus={false}
                         showIndicators={false}
                         dynamicHeight
