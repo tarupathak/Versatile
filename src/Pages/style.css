@@ -41,7 +41,7 @@
   margin-top: 2vh;
   font-size: 1vw;
   width: 6vw;
-  height: 6vh;
+  height: 5vh;
   border: 1.5px solid #000000;
   border-radius: 1.2vh;
   background-color: #ffffff;
@@ -271,24 +271,19 @@ h3 {
   }
 }
 
-@media (max-width: 786px){
-
-.btn-tile button {
+@media (max-width: 786px) {
+  .btn-tile button {
     width: 8vw;
     height: 5vh;
- 
-}
+  }
 }
 
-@media (max-width: 532px){
-
+@media (max-width: 532px) {
   .btn-tile button {
-      width: 7vw;
-      height: 2vh;
-   
+    width: 7vw;
+    height: 2vh;
   }
-  }
-
+}
 
 /*<-------------------TileModal-------------------->*/
 
@@ -301,4 +296,21 @@ h3 {
   font-weight: 700;
   font-size: 2vw;
   color: #000000;
+}
+
+@media (max-width: 710px) {
+  .line {
+    display: none;
+    margin: 1vh;
+  }
+
+  .btn-flex button {
+    height: 2.5vh;
+  }
+}
+
+@media (max-width: 875px) {
+  .btn-flex button {
+    height: 4vh;
+  }
 }
