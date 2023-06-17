@@ -306,11 +306,45 @@ h3 {
 
   .btn-flex button {
     height: 2.5vh;
+    width: 7vw;
+  }
+  .fles-container{
+    flex-direction: column;
+  }
+
+  .option-flex{
+    margin:1.5vh;
+  }
+  #size{
+    text-align: center;
+  }
+
+  #color{
+    text-align: center;
   }
 }
 
-@media (max-width: 875px) {
+@media (max-width: 706px) {
   .btn-flex button {
     height: 4vh;
+    width: 9.5vw;
+    font-size: 1vh;
+  }
+}
+
+
+
+
+@media (max-width: 459px) {
+  .btn-flex button {
+    height: 3vh;
+    width: 10.5vw;
+  }
+}
+
+@media (max-width: 320px) {
+  .btn-flex button {
+    height: 3vh;
+    width: 13.6vw;
   }
 }
