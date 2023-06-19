@@ -13,7 +13,7 @@ const Home = () => {
         <div id="cloth-img">
           <NavLink to="/tiles">
             <ButtonToolbar>
-              <Button appearance="ghost">Ghost</Button>
+              <Button appearance="ghost">Show Tiles</Button>
             </ButtonToolbar>
           </NavLink>
           <img src={cloth} alt="cloth-img" />
