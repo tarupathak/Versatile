@@ -2,6 +2,8 @@ import React from "react";
 import "./style.css";
 import cloth from "../Images/clothImg.svg";
 import Nav from "../Components/Nav";
+import { NavLink } from "react-router-dom";
+import { Button, ButtonToolbar } from 'rsuite';
 
 const Home = () => {
   return (
@@ -9,6 +11,11 @@ const Home = () => {
       <Nav />
       <div id="home">
         <div id="cloth-img">
+          <NavLink to="/tiles">
+            <ButtonToolbar>
+              <Button appearance="ghost">Ghost</Button>
+            </ButtonToolbar>
+          </NavLink>
           <img src={cloth} alt="cloth-img" />
         </div>
         <div id="btn-flex">

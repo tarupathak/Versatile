@@ -182,7 +182,14 @@ h3 {
   flex-wrap: wrap;
   height: 88vh;
 }
-
+#cloth-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
 #cloth-img img {
   margin-top: 5vh;
   width: 26.3vw;
@@ -309,18 +316,18 @@ h3 {
     height: 2.5vh;
     width: 7vw;
   }
-  .fles-container{
+  .fles-container {
     flex-direction: column;
   }
 
-  .option-flex{
-    margin:1.5vh;
+  .option-flex {
+    margin: 1.5vh;
   }
-  #size{
+  #size {
     text-align: center;
   }
 
-  #color{
+  #color {
     text-align: center;
   }
 }
@@ -332,9 +339,6 @@ h3 {
     font-size: 1vh;
   }
 }
-
-
-
 
 @media (max-width: 459px) {
   .btn-flex button {
@@ -348,4 +352,19 @@ h3 {
     height: 3vh;
     width: 13.6vw;
   }
+}
+
+@import "rsuite/dist/rsuite.css";
+
+.rs-btn-ghost.rs-btn {
+  padding: 7px 11px;
+  color: #000;
+  border: 1px solid #000;
+}
+
+#cloth-img .rs-btn-ghost.rs-btn {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
 }
