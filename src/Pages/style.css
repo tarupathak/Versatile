@@ -368,3 +368,30 @@ h3 {
   transform: translate(-50%, -50%);
   color: #000;
 }
+
+.tile-heading {
+  text-align: center;
+}
+
+#drawer {
+  width: 55vw;
+}
+
+.draw-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2vh;
+}
+
+.draw-btn .rs-btn {
+  background: none;
+  border: 1px solid #000000;
+  border-radius: 1vh;
+}
+
+.draw-btn .rs-btn:hover {
+  color: white;
+  border: 1px solid #367fb2;
+  background-color: #367fb2;
+}
