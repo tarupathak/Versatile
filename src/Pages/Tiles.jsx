@@ -68,9 +68,10 @@ const Tiles = () => {
         </div>
         <div>
           {/*-------------Drawer--------------*/}
-          <ButtonToolbar>
+          <ButtonToolbar id="icon-toolbar">
             <IconButton
               icon={<AngleRightIcon />}
+              
               onClick={() => handleOpens("left")}
             >
               Open Options

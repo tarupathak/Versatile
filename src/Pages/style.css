@@ -395,3 +395,11 @@ h3 {
   border: 1px solid #367fb2;
   background-color: #367fb2;
 }
+
+
+
+.rs-btn-icon-with-text.rs-btn.rs-btn-icon-placement-left {
+    margin-left: -50vw;
+    position: fixed;
+    margin-top: 12vh;
+}
