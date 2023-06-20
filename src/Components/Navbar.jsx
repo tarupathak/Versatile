@@ -8,6 +8,8 @@ import OtpInput from "react-otp-input";
 const Navbar = () => {
   const navHandler = useNavigate();
   const [otp, setOtp] = useState("");
+  const [number, setNumber] = useState(0);
+
   function handleSubmit() {
     return navHandler("/catalogue"), handleOpen("md");
   }
@@ -26,6 +28,32 @@ const Navbar = () => {
   const handleExit = () => {
     return setShow(false);
   };
+
+  function handlePhone(e) {
+    console.log(e)
+    if (/^[0-9]*$/.test(e) && e !== "") {
+      if (e >= 1000000000 && e <= 1000000000000) {
+        setNumber(e);
+        document.getElementById("invalidNum").style.visibility = "hidden";
+        document.getElementById("phone").style.borderColor = "green";
+      } else {
+        setNumber(0);
+        document.getElementById("phone").style.borderColor = "red";
+        document.getElementById("invalidNum").style.visibility = "visible";
+      }
+    } else {
+      setNumber(0);
+      if (e === "" || e === undefined) {
+        document.getElementById("invalidNum").style.visibility = "hidden";
+        document.getElementById("phone").style.borderColor = "#443C68";
+      } else {
+        document.getElementById("invalidNum").style.visibility = "visible";
+        document.getElementById("phone").style.borderColor = "red";
+      }
+    }
+  }
+
+
   return (
     <>
       <nav>
@@ -44,7 +72,16 @@ const Navbar = () => {
             </Modal.Header>
             <Modal.Body>
               <p> Enter your mobile number to access your catalogue.</p>
-              <Input className="my-input" type="number" />
+              <Input
+                className="my-input"
+                type="number"
+                placeholder="Enter Mobile Number"
+                id="phone"
+                onChange={(e)=>handlePhone(e)}
+              />
+              <p className="valid" id="invalidNum">
+                Enter a valid phone number with 10 digits.
+              </p>
             </Modal.Body>
             <Modal.Footer>
               <ButtonToolbar>
@@ -68,6 +105,7 @@ const Navbar = () => {
                   value={otp}
                   onChange={setOtp}
                   numInputs={4}
+
                   renderSeparator={<span>-</span>}
                   renderInput={(props) => <input {...props} />}
                   inputStyle={{
