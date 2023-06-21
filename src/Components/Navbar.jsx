@@ -17,6 +17,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(true);
   const [size, setSize] = useState();
   const handleShow = () => {
+    if(number)
     return setOpen(false), setShow(true);
   };
   const handleOpen = (value) => {
@@ -26,6 +27,7 @@ const Navbar = () => {
     setOpen(false);
   };
   const handleExit = () => {
+    if(otp>999)
     return setShow(false);
   };
 
@@ -105,7 +107,6 @@ const Navbar = () => {
                   value={otp}
                   onChange={setOtp}
                   numInputs={4}
-
                   renderSeparator={<span>-</span>}
                   renderInput={(props) => <input {...props} />}
                   inputStyle={{
@@ -118,6 +119,9 @@ const Navbar = () => {
                   }}
                 />
               </div>
+              <p className="valid" id="invalidOtp">
+                Enter a valid 4 digit OTP.
+              </p>
             </Modal.Body>
             <Modal.Footer>
               <Button onClick={handleExit} appearance="primary">
